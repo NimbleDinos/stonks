@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,11 +7,15 @@ public class NewsArticle
 {
     string message;
     int score;
+    Company company;
+    int hourCreated;
 
-    public NewsArticle(string message, int score)
+    public NewsArticle(string message, int score, Company company, int hourCreated)
     {
         this.message = message;
         this.score = score;
+        this.company = company;
+        this.hourCreated = hourCreated;
     }
 
     public string getMessage()
@@ -21,6 +26,16 @@ public class NewsArticle
     public int getScore()
     {
         return score;
+    }
+
+    public Company getCompany()
+    {
+        return company;
+    }
+
+    public int getHourCreated()
+    {
+        return hourCreated;
     }
 }
 
@@ -48,19 +63,6 @@ public class Score
 
 public class newsGen : MonoBehaviour
 {
-    public Dictionary<int, string> Companies()
-    {
-        Dictionary<int, string> companies = new Dictionary<int, string>();
-        companies.Add(1, "Peach");
-        companies.Add(2, "Bean Corp");
-        companies.Add(3, "Crying Inc");
-        companies.Add(4, "Zoinkies");
-        companies.Add(5, "COOKSQUFF");
-        companies.Add(6, "funBorn");
-        companies.Add(7, "fatcha");
-        return companies;
-    }
-
     public Dictionary<int, Score> Actions()
     {
         Dictionary<int, Score> act_dict = new Dictionary<int, Score>();
@@ -122,28 +124,61 @@ public class newsGen : MonoBehaviour
         return companies;
     }
 
-    public NewsArticle createNews()
+    public NewsArticle createNews(int hour)
     {
-        Dictionary<int, string> companies = Companies();
         Dictionary<int, Score> actions = Actions();
         Dictionary<int, string> objects = Things();
 
         System.Random rnd = new System.Random();
-        int randCompIndex = rnd.Next(1, companies.Count + 1);
-        int randActIndex = rnd.Next(1, actions.Count + 1);
-        int randObjIndex = rnd.Next(1, objects.Count + 1);
+        int randCompIndex = rnd.Next(1, Globals.companies.Count);
+        int randActIndex = rnd.Next(1, actions.Count);
+        int randObjIndex = rnd.Next(1, objects.Count);
 
-        string company = companies[randCompIndex];
+        Company company = Globals.companies[randCompIndex];
         Score action = actions[randActIndex];
         string obj = objects[randObjIndex];
 
-        string newsArticle = company + " " + action.getMessage() + " " + obj + ".";
+        string newsArticle = company.getName() + " " + action.getMessage() + " " + obj + ".";
         Debug.Log(newsArticle);
-        return new NewsArticle(newsArticle, action.getScore());
+        return new NewsArticle(newsArticle, action.getScore(), company, hour);
     }
 
-    private void Start()
+    public void updateCompanyData(NewsArticle article)
     {
-        NewsArticle test = createNews();
+        foreach (Company company in Globals.companies)
+        {
+            if (company.getName() == article.getCompany().getName())
+            {
+                Debug.Log(company.getStonkValue());
+                float onePercent = company.getStonkValue() / 100;
+                float totalPercent = onePercent * article.getScore();
+
+                if ((float)company.getStonkValue() + totalPercent < 0)
+                {
+                    company.setStonkValue(1);
+                } else
+                {
+                    company.setStonkValue(Mathf.RoundToInt((float)company.getStonkValue() + totalPercent));
+                }
+
+                company.updateStonkHistory(article.getHourCreated(), company.getStonkValue());
+                Debug.Log(company.getStonkValue());
+            }
+        }
+    }
+
+    int previousHour = 80000;
+
+    private void Update()
+    {
+        if (Time_Handler.currentHour != previousHour)
+        {
+            if (Time_Handler.currentHour >= 9 && Time_Handler.currentHour <= 20)
+            {
+                updateCompanyData(createNews(Time_Handler.currentHour));
+            }
+        }
+
+        previousHour = Time_Handler.currentHour;
     }
 }
