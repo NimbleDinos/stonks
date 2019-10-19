@@ -7,6 +7,12 @@ public class History
     int time;
     int price;
 
+    public History(int time, int price)
+    {
+        this.time = time;
+        this.price = price;
+    }
+
     public int getTime()
     {
         return time;
@@ -41,8 +47,18 @@ public class Company
         return stonkValue;
     }
 
+    public void setStonkValue(int stonkValue)
+    {
+        this.stonkValue = stonkValue;
+    }
+
     public List<History> getStonkHistory()
     {
         return stonkHistory;
+    }
+
+    public void updateStonkHistory(int time, int price)
+    {
+        stonkHistory.Add(new History(time, price));
     }
 }
