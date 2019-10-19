@@ -39,7 +39,7 @@ public class AI_Schedule : MonoBehaviour
         if (Time_Handler.currentHour >= stocksHour && !visitedStocksMorning && !isBusy)
         {
             GoVisitStocks();
-        }        
+        }
 
     }
 
