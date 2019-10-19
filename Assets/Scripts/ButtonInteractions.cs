@@ -7,7 +7,6 @@ public class ButtonInteractions : MonoBehaviour
 
     DataModel dm;
     CansModel cm;
-    bool canAffords = false;
 
 
     // Start is called before the first frame update
@@ -22,7 +21,7 @@ public class ButtonInteractions : MonoBehaviour
         if(dm.stockAmount >= 1)
         {
             dm.ModifyStock(-1);
-            cm.ModifyCans(dm.beansCost);
+            cm.ModifyCans(1 * dm.beansCost);
         }
     }
 
@@ -31,16 +30,16 @@ public class ButtonInteractions : MonoBehaviour
         if (dm.stockAmount >= 100)
         {
             dm.ModifyStock(-100);
-            cm.ModifyCans(dm.beansCost * 100);
+            cm.ModifyCans(100 * dm.beansCost);
         }
     }
 
     public void SellTen()
     {
-        if (dm.stockAmount >= 10)
+        if(dm.stockAmount >= 10)
         {
             dm.ModifyStock(-10);
-            cm.ModifyCans(dm.beansCost * 10);
+            cm.ModifyCans(10 * dm.beansCost);
         }
     }
 
@@ -64,22 +63,11 @@ public class ButtonInteractions : MonoBehaviour
 
     public void BuyOneHundred()
     {
-        if (cm.cansAmount >= dm.beansCost * 10)
-        {
-        dm.ModifyStock(100);
-        cm.ModifyCans(-dm.beansCost * 10);
-        }
-    }
 
-    public bool canAfford()
-    {
-       if(cm.cansAmount < dm.beansCost)
+        if (cm.cansAmount >= dm.beansCost * 100)
         {
-            return false;
-        }
-       else
-        {
-            return true;
+            dm.ModifyStock(100);
+            cm.ModifyCans(-dm.beansCost * 100);
         }
     }
 }

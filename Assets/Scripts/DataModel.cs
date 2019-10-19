@@ -31,6 +31,6 @@ public class DataModel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        stockText.text =  stock + "Stocks: " + stockAmount.ToString();
+        stockText.text =  stock + " Stocks: " + stockAmount.ToString();
     }
 }
