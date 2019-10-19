@@ -20,12 +20,14 @@ public class Time_Handler : MonoBehaviour
         {
             currentTime -= timePerHour;
             currentHour++;
-
+            
             if (currentHour >= 24)
             {
                 currentHour -= 24;
                 currentDay++;
             }
+
+            Debug.Log("Current Hour: " + currentHour);
         }
     }
 }
