@@ -565,7 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49562a32f6798e1449fa6a2bf7221dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timePerHour: 1
+  timePerHour: 5
 --- !u!1 &955053744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,7 +1205,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newsHour: 8
   stocksHour: 10
+  timeSpentAtStocksMax: 1
+  timeSpentAtNewsMax: 1
+  currentTask: 3
   agentNav: {fileID: 2124541717}
+  taskStartTime: 0
+  taskStartHour: 0
 --- !u!114 &2124541717 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
@@ -1434,5 +1439,10 @@ PrefabInstance:
       propertyPath: stockMarketTerminals.Array.data[2]
       value: 
       objectReference: {fileID: 966747972}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: schedule
+      value: 
+      objectReference: {fileID: 2124541715}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5e01dd46b1eea840bd8cc147d8af036, type: 3}

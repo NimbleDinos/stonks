@@ -15,6 +15,8 @@ public class AI_Navigation : MonoBehaviour
 
     private Transform currentDestination;
 
+    private TaskType intendedTask = TaskType.Wander;
+
     private void Start()
     {
         currentDestination = homePoint;
@@ -24,19 +26,23 @@ public class AI_Navigation : MonoBehaviour
 
     public void Update()
     {
-        if (transform.position.x == currentDestination.position.x && transform.position.z == currentDestination.position.z)
+        if (transform.position.x == currentDestination.position.x && transform.position.z == currentDestination.position.z && inMotion)
         {
             inMotion = false;
             agent.isStopped = true;
+            schedule.currentTask = intendedTask;
+            schedule.taskStartHour = Time_Handler.currentHour;
+            schedule.taskStartTime = Time_Handler.currentTime;
         }
     }
 
-    public void SetTarget(Transform target)
+    public void SetTarget(Transform target, TaskType taskIntended)
     {
         currentDestination = target;
         agent.SetDestination(currentDestination.position);
         agent.isStopped = false;
         inMotion = true;
+        intendedTask = taskIntended;
     }
 
     public Transform FindNearestNewsStand()

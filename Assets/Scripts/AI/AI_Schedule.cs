@@ -16,8 +16,8 @@ public class AI_Schedule : MonoBehaviour
     
     private bool startedDay = false;
 
-    private float taskStartTime = 0.0f;
-    private int taskStartHour = 0;
+    public float taskStartTime = 0.0f;
+    public int taskStartHour = 0;
     
     private void Update()
     {
@@ -41,6 +41,24 @@ public class AI_Schedule : MonoBehaviour
             GoVisitStocks();
         }
 
+        if (currentTask == TaskType.News)
+        {
+            if (Time_Handler.currentHour >= taskStartHour + timeSpentAtNewsMax && Time_Handler.currentTime >= taskStartTime)
+            {
+                isBusy = false;
+                currentTask = TaskType.Wander;
+            }
+        }
+
+        if (currentTask == TaskType.Stocks)
+        {
+            if (Time_Handler.currentHour >= taskStartHour + timeSpentAtStocksMax && Time_Handler.currentTime >= taskStartTime)
+            {
+                isBusy = false;
+                currentTask = TaskType.Wander;
+            }
+        }
+
     }
 
     public void StartNewDay()
@@ -60,7 +78,7 @@ public class AI_Schedule : MonoBehaviour
         //agentNav.SetTarget(agentNav.FindNearestNewsStand());
 
         int rand = Random.Range(0, agentNav.newsStands.Count);
-        agentNav.SetTarget(agentNav.newsStands[rand]);
+        agentNav.SetTarget(agentNav.newsStands[rand], TaskType.News);
     }
 
     private void GoVisitStocks()
@@ -73,7 +91,7 @@ public class AI_Schedule : MonoBehaviour
         //agentNav.SetTarget(agentNav.FindNearestStocksTerminal());
 
         int rand = Random.Range(0, agentNav.stockMarketTerminals.Count);
-        agentNav.SetTarget(agentNav.stockMarketTerminals[rand]);
+        agentNav.SetTarget(agentNav.stockMarketTerminals[rand], TaskType.Stocks);
     }
 
 
