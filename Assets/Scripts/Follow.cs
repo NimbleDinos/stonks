@@ -33,8 +33,8 @@ public class Follow : MonoBehaviour
 
     void CameraClipingDetection()
     {
-        RaycastHit hit;
-        Debug.DrawLine(player.transform.position, transform.position, Color.red, 0.1f);
+        //RaycastHit hit;
+        //Debug.DrawLine(player.transform.position, transform.position, Color.red, 0.1f);
     }
 
     // Use this for initialization
