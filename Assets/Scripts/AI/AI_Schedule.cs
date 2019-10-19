@@ -18,7 +18,14 @@ public class AI_Schedule : MonoBehaviour
 
     public float taskStartTime = 0.0f;
     public int taskStartHour = 0;
-    
+
+    public float wanderTimerMax = 5.0f;
+    private float wanderTimeCurrent = 0.0f;
+
+    public MeshRenderer mr;
+
+    public bool isTrader = true;
+
     private void Update()
     {
         if (Time_Handler.currentHour == 0 && !startedDay)
@@ -30,38 +37,57 @@ public class AI_Schedule : MonoBehaviour
         {
             startedDay = false;
         }
+    
 
-        if (Time_Handler.currentHour >= newsHour && !visitedNewsMorning && !isBusy)
+        if (!isBusy)
         {
-            GoVisitNews();
-        }
-
-        if (Time_Handler.currentHour >= stocksHour && !visitedStocksMorning && !isBusy)
-        {
-            GoVisitStocks();
-        }
-
-        if (Time_Handler.currentHour >= homeTime && !isBusy && !atHome)
-        {
-            GoHome();
-        }
-
-        if (currentTask == TaskType.News)
-        {
-            if (Time_Handler.currentHour >= taskStartHour + timeSpentAtNewsMax && Time_Handler.currentTime >= taskStartTime)
+            if (Time_Handler.currentHour >= newsHour && !visitedNewsMorning)
             {
-                isBusy = false;
-                currentTask = TaskType.Wander;
+                GoVisitNews();
+            }
+
+            if (Time_Handler.currentHour >= stocksHour && !visitedStocksMorning)
+            {
+                GoVisitStocks();
+            }
+
+            if (Time_Handler.currentHour >= homeTime && !atHome)
+            {
+                GoHome();
             }
         }
 
-        if (currentTask == TaskType.Stocks)
+        switch (currentTask)
         {
-            if (Time_Handler.currentHour >= taskStartHour + timeSpentAtStocksMax && Time_Handler.currentTime >= taskStartTime)
-            {
-                isBusy = false;
-                currentTask = TaskType.Wander;
-            }
+            case TaskType.News:
+                if (Time_Handler.currentHour >= taskStartHour + timeSpentAtNewsMax && Time_Handler.currentTime >= taskStartTime)
+                {
+                    isBusy = false;
+                    currentTask = TaskType.Wander;
+                }
+                break;
+            case TaskType.Stocks:
+                if (Time_Handler.currentHour >= taskStartHour + timeSpentAtStocksMax && Time_Handler.currentTime >= taskStartTime)
+                {
+                    isBusy = false;
+                    currentTask = TaskType.Wander;
+                }
+                break;
+            case TaskType.Wander:
+                break;
+            case TaskType.Home:
+                break;
+            default:
+                break;
+        }
+
+        if (currentTask == TaskType.Home)
+        {
+            mr.enabled = false;
+        }
+        else
+        {
+            mr.enabled = true;
         }
 
     }
@@ -106,5 +132,14 @@ public class AI_Schedule : MonoBehaviour
         agentNav.SetTarget(agentNav.homePoint, TaskType.Home);
         atHome = true;
     }
+
+    private void Wander()
+    {
+        agentNav.SetWanderTarget();
+    }
+
+    /*TODO Wander, if in wander state, pick random valid location and begin 
+     * walking their, after a few seconds pick new location and repeat until 
+     * no longer wander state*/
 
 }
