@@ -48,19 +48,6 @@ public class Score
 
 public class newsGen : MonoBehaviour
 {
-    public Dictionary<int, string> Companies()
-    {
-        Dictionary<int, string> companies = new Dictionary<int, string>();
-        companies.Add(1, "Peach");
-        companies.Add(2, "Bean Corp");
-        companies.Add(3, "Crying Inc");
-        companies.Add(4, "Zoinkies");
-        companies.Add(5, "COOKSQUFF");
-        companies.Add(6, "funBorn");
-        companies.Add(7, "fatcha");
-        return companies;
-    }
-
     public Dictionary<int, Score> Actions()
     {
         Dictionary<int, Score> act_dict = new Dictionary<int, Score>();
@@ -124,20 +111,19 @@ public class newsGen : MonoBehaviour
 
     public NewsArticle createNews()
     {
-        Dictionary<int, string> companies = Companies();
         Dictionary<int, Score> actions = Actions();
         Dictionary<int, string> objects = Things();
 
         System.Random rnd = new System.Random();
-        int randCompIndex = rnd.Next(1, companies.Count + 1);
-        int randActIndex = rnd.Next(1, actions.Count + 1);
-        int randObjIndex = rnd.Next(1, objects.Count + 1);
+        int randCompIndex = rnd.Next(1, Globals.companies.Count);
+        int randActIndex = rnd.Next(1, actions.Count);
+        int randObjIndex = rnd.Next(1, objects.Count);
 
-        string company = companies[randCompIndex];
+        Company company = Globals.companies[randCompIndex];
         Score action = actions[randActIndex];
         string obj = objects[randObjIndex];
 
-        string newsArticle = company + " " + action.getMessage() + " " + obj + ".";
+        string newsArticle = company.getName() + " " + action.getMessage() + " " + obj + ".";
         Debug.Log(newsArticle);
         return new NewsArticle(newsArticle, action.getScore());
     }
