@@ -6,7 +6,7 @@ public enum TaskType {News, Stocks, Home, Wander};
 
 public class AI_Schedule : MonoBehaviour
 {
-    public int newsHour = 8, stocksHour = 10, timeSpentAtStocksMax = 1, timeSpentAtNewsMax = 1;
+    public int newsHour = 8, stocksHour = 10, homeTime = 21, timeSpentAtStocksMax = 1, timeSpentAtNewsMax = 1;
 
     public TaskType currentTask = TaskType.Wander;
 
@@ -39,6 +39,11 @@ public class AI_Schedule : MonoBehaviour
         if (Time_Handler.currentHour >= stocksHour && !visitedStocksMorning && !isBusy)
         {
             GoVisitStocks();
+        }
+
+        if (Time_Handler.currentHour >= homeTime && !isBusy && !atHome)
+        {
+            GoHome();
         }
 
         if (currentTask == TaskType.News)
@@ -74,6 +79,7 @@ public class AI_Schedule : MonoBehaviour
 
         visitedNewsMorning = true;
         isBusy = true;
+        atHome = false;
 
         //agentNav.SetTarget(agentNav.FindNearestNewsStand());
 
@@ -86,7 +92,8 @@ public class AI_Schedule : MonoBehaviour
         Debug.Log("Visiting Stock Exchange");
 
         visitedStocksMorning = true;
-        isBusy = false;
+        isBusy = true;
+        atHome = false;
 
         //agentNav.SetTarget(agentNav.FindNearestStocksTerminal());
 
@@ -94,8 +101,10 @@ public class AI_Schedule : MonoBehaviour
         agentNav.SetTarget(agentNav.stockMarketTerminals[rand], TaskType.Stocks);
     }
 
-
-
-
+    private void GoHome()
+    {
+        agentNav.SetTarget(agentNav.homePoint, TaskType.Home);
+        atHome = true;
+    }
 
 }

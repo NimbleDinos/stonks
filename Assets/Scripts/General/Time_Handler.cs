@@ -6,7 +6,7 @@ public class Time_Handler : MonoBehaviour
 {
     public float timePerHour = 60.0f; //60.0f = 1 real-time minute per in-game hour
 
-    public static int currentHour = 7;
+    public static int currentHour = 0;
     public static int currentDay = 0;
     public static float currentTime = 0.0f;
 
