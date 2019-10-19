@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DataModel : MonoBehaviour
 {
 
-    float stockAmount;
+    public float stockAmount;
     Text stockText;
     public int beansCost = 2;
     string stock = "Bean Corp";

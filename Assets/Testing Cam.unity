@@ -347,7 +347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &300431989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,9 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stockAmount: 0
-  stockText: {fileID: 0}
   beansCost: 2
-  stock: Bean Corp
 --- !u!114 &300431994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,9 +460,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8b54e3538fea4429f3b584e64c6bbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dm: {fileID: 0}
-  cm: {fileID: 0}
-  canAffords: 0
 --- !u!114 &300431995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,7 +473,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cansAmount: 0
-  cansText: {fileID: 0}
 --- !u!1 &319699689
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +541,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Sell All
+  m_Text: 'Sell 10
 
 '
 --- !u!222 &319699692
@@ -857,8 +851,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stockHUD: {fileID: 300431988}
-  isShowing: 0
-  isColliding: 0
 --- !u!1 &641636939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,7 +1651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 303.00018, y: 20}
+  m_AnchoredPosition: {x: 303.00018, y: 75}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &973676819
@@ -1865,7 +1857,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cansAmount: 0
-  cansText: {fileID: 0}
 --- !u!1 &1088268677
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,7 +2126,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 303.00006, y: 75}
+  m_AnchoredPosition: {x: 303.00006, y: 20}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1862486666
