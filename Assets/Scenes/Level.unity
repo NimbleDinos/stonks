@@ -341,51 +341,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI_Trader (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: leisureLocations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[2]
-      value: 
-      objectReference: {fileID: 727234660}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[1]
-      value: 
-      objectReference: {fileID: 1987551594}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[0]
-      value: 
-      objectReference: {fileID: 1967828179}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: stockMarketPoint
-      value: 
-      objectReference: {fileID: 1595305923}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: homePoint
-      value: 
-      objectReference: {fileID: 567874317}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: schedule
-      value: 
-      objectReference: {fileID: 679667140}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: leisureLocations.Array.data[0]
-      value: 
-      objectReference: {fileID: 1727503469}
     - target: {fileID: 1822159115247533515, guid: a5e01dd46b1eea840bd8cc147d8af036,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -441,6 +396,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: leisureLocations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[2]
+      value: 
+      objectReference: {fileID: 727234660}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[1]
+      value: 
+      objectReference: {fileID: 1987551594}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[0]
+      value: 
+      objectReference: {fileID: 1967828179}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: stockMarketPoint
+      value: 
+      objectReference: {fileID: 1595305923}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: homePoint
+      value: 
+      objectReference: {fileID: 567874317}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: schedule
+      value: 
+      objectReference: {fileID: 679667140}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: leisureLocations.Array.data[0]
+      value: 
+      objectReference: {fileID: 1727503469}
     - target: {fileID: 6643698684879563564, guid: a5e01dd46b1eea840bd8cc147d8af036,
         type: 3}
       propertyPath: m_Height
@@ -1073,51 +1073,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI_Trader (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: leisureLocations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[2]
-      value: 
-      objectReference: {fileID: 727234660}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[1]
-      value: 
-      objectReference: {fileID: 1987551594}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[0]
-      value: 
-      objectReference: {fileID: 1967828179}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: stockMarketPoint
-      value: 
-      objectReference: {fileID: 1595305923}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: homePoint
-      value: 
-      objectReference: {fileID: 1188756220}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: schedule
-      value: 
-      objectReference: {fileID: 515887926}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: leisureLocations.Array.data[0]
-      value: 
-      objectReference: {fileID: 1727503469}
     - target: {fileID: 1822159115247533515, guid: a5e01dd46b1eea840bd8cc147d8af036,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1173,6 +1128,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: leisureLocations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[2]
+      value: 
+      objectReference: {fileID: 727234660}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[1]
+      value: 
+      objectReference: {fileID: 1987551594}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[0]
+      value: 
+      objectReference: {fileID: 1967828179}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: stockMarketPoint
+      value: 
+      objectReference: {fileID: 1595305923}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: homePoint
+      value: 
+      objectReference: {fileID: 1188756220}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: schedule
+      value: 
+      objectReference: {fileID: 515887926}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: leisureLocations.Array.data[0]
+      value: 
+      objectReference: {fileID: 1727503469}
     - target: {fileID: 6643698684879563564, guid: a5e01dd46b1eea840bd8cc147d8af036,
         type: 3}
       propertyPath: m_Height
@@ -2237,51 +2237,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI_Trader (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: leisureLocations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[2]
-      value: 
-      objectReference: {fileID: 727234660}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[1]
-      value: 
-      objectReference: {fileID: 1987551594}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[0]
-      value: 
-      objectReference: {fileID: 1967828179}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: stockMarketPoint
-      value: 
-      objectReference: {fileID: 1595305923}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: homePoint
-      value: 
-      objectReference: {fileID: 1483409993}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: schedule
-      value: 
-      objectReference: {fileID: 1954350880}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: leisureLocations.Array.data[0]
-      value: 
-      objectReference: {fileID: 1727503469}
     - target: {fileID: 1822159115247533515, guid: a5e01dd46b1eea840bd8cc147d8af036,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2337,6 +2292,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: leisureLocations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[2]
+      value: 
+      objectReference: {fileID: 727234660}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[1]
+      value: 
+      objectReference: {fileID: 1987551594}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[0]
+      value: 
+      objectReference: {fileID: 1967828179}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: stockMarketPoint
+      value: 
+      objectReference: {fileID: 1595305923}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: homePoint
+      value: 
+      objectReference: {fileID: 1483409993}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: schedule
+      value: 
+      objectReference: {fileID: 1954350880}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: leisureLocations.Array.data[0]
+      value: 
+      objectReference: {fileID: 1727503469}
     - target: {fileID: 6643698684879563564, guid: a5e01dd46b1eea840bd8cc147d8af036,
         type: 3}
       propertyPath: m_Height
@@ -2650,51 +2650,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI_Trader (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: leisureLocations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[2]
-      value: 
-      objectReference: {fileID: 727234660}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[1]
-      value: 
-      objectReference: {fileID: 1987551594}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[0]
-      value: 
-      objectReference: {fileID: 1967828179}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: stockMarketPoint
-      value: 
-      objectReference: {fileID: 1595305923}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: homePoint
-      value: 
-      objectReference: {fileID: 946193842}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: schedule
-      value: 
-      objectReference: {fileID: 1226678288}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: leisureLocations.Array.data[0]
-      value: 
-      objectReference: {fileID: 1727503469}
     - target: {fileID: 1822159115247533515, guid: a5e01dd46b1eea840bd8cc147d8af036,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2750,6 +2705,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: leisureLocations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[2]
+      value: 
+      objectReference: {fileID: 727234660}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[1]
+      value: 
+      objectReference: {fileID: 1987551594}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[0]
+      value: 
+      objectReference: {fileID: 1967828179}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: stockMarketPoint
+      value: 
+      objectReference: {fileID: 1595305923}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: homePoint
+      value: 
+      objectReference: {fileID: 946193842}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: schedule
+      value: 
+      objectReference: {fileID: 1226678288}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: leisureLocations.Array.data[0]
+      value: 
+      objectReference: {fileID: 1727503469}
     - target: {fileID: 6643698684879563564, guid: a5e01dd46b1eea840bd8cc147d8af036,
         type: 3}
       propertyPath: m_Height
@@ -3128,7 +3128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49562a32f6798e1449fa6a2bf7221dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timePerHour: 2
+  timePerHour: 1
 --- !u!114 &1422355108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3305,51 +3305,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI_Trader (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: leisureLocations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[2]
-      value: 
-      objectReference: {fileID: 727234660}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[1]
-      value: 
-      objectReference: {fileID: 1987551594}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[0]
-      value: 
-      objectReference: {fileID: 1967828179}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: stockMarketPoint
-      value: 
-      objectReference: {fileID: 1595305923}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: homePoint
-      value: 
-      objectReference: {fileID: 80915824}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: schedule
-      value: 
-      objectReference: {fileID: 1455620097}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: leisureLocations.Array.data[0]
-      value: 
-      objectReference: {fileID: 1727503469}
     - target: {fileID: 1822159115247533515, guid: a5e01dd46b1eea840bd8cc147d8af036,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3405,6 +3360,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: leisureLocations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[2]
+      value: 
+      objectReference: {fileID: 727234660}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[1]
+      value: 
+      objectReference: {fileID: 1987551594}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[0]
+      value: 
+      objectReference: {fileID: 1967828179}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: stockMarketPoint
+      value: 
+      objectReference: {fileID: 1595305923}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: homePoint
+      value: 
+      objectReference: {fileID: 80915824}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: schedule
+      value: 
+      objectReference: {fileID: 1455620097}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: leisureLocations.Array.data[0]
+      value: 
+      objectReference: {fileID: 1727503469}
     - target: {fileID: 6643698684879563564, guid: a5e01dd46b1eea840bd8cc147d8af036,
         type: 3}
       propertyPath: m_Height
@@ -4637,51 +4637,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI_Trader
       objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: leisureLocations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[2]
-      value: 
-      objectReference: {fileID: 727234660}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[1]
-      value: 
-      objectReference: {fileID: 1987551594}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: newsStands.Array.data[0]
-      value: 
-      objectReference: {fileID: 1967828179}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: stockMarketPoint
-      value: 
-      objectReference: {fileID: 1595305923}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: homePoint
-      value: 
-      objectReference: {fileID: 2012877891}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: schedule
-      value: 
-      objectReference: {fileID: 1363367508}
-    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
-        type: 3}
-      propertyPath: leisureLocations.Array.data[0]
-      value: 
-      objectReference: {fileID: 1727503469}
     - target: {fileID: 1822159115247533515, guid: a5e01dd46b1eea840bd8cc147d8af036,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4737,6 +4692,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: leisureLocations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[2]
+      value: 
+      objectReference: {fileID: 727234660}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[1]
+      value: 
+      objectReference: {fileID: 1987551594}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: newsStands.Array.data[0]
+      value: 
+      objectReference: {fileID: 1967828179}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: stockMarketPoint
+      value: 
+      objectReference: {fileID: 1595305923}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: homePoint
+      value: 
+      objectReference: {fileID: 2012877891}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: schedule
+      value: 
+      objectReference: {fileID: 1363367508}
+    - target: {fileID: 6643698684879563562, guid: a5e01dd46b1eea840bd8cc147d8af036,
+        type: 3}
+      propertyPath: leisureLocations.Array.data[0]
+      value: 
+      objectReference: {fileID: 1727503469}
     - target: {fileID: 6643698684879563564, guid: a5e01dd46b1eea840bd8cc147d8af036,
         type: 3}
       propertyPath: m_Height
