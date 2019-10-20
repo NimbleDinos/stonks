@@ -133,7 +133,7 @@ public class AI_Schedule : MonoBehaviour
 
     private void GoVisitNews()
     {
-        Debug.Log("Visiting News");
+        //Debug.Log("Visiting News");
 
         recentlyVisitedNews = true;
         isBusy = true;
@@ -145,7 +145,7 @@ public class AI_Schedule : MonoBehaviour
 
     private void GoVisitStocks()
     {
-        Debug.Log("Visiting Stock Exchange");
+        //Debug.Log("Visiting Stock Exchange");
 
         shouldVisitStocks = false;
         isBusy = true;

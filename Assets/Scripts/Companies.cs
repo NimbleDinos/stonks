@@ -29,6 +29,9 @@ public class Company
     string name;
     int stonkValue;
     List<History> stonkHistory;
+    GameObject companyBuilding;
+    float maxSize;
+    float minSize = 0.25f;
 
     public Company(string name, int stonkValue)
     {
@@ -50,6 +53,8 @@ public class Company
     public void setStonkValue(int stonkValue)
     {
         this.stonkValue = stonkValue;
+
+        SetBuildingScale();
     }
 
     public List<History> getStonkHistory()
@@ -60,5 +65,23 @@ public class Company
     public void updateStonkHistory(int time, int price)
     {
         stonkHistory.Add(new History(time, price));
+    }
+
+    public void SetBuilding(GameObject building)
+    {
+        companyBuilding = building;
+        maxSize = companyBuilding.transform.localScale.z;
+    }
+
+    public void SetBuildingScale()
+    {
+        float scaleRange = maxSize - minSize;
+        float scalePercentage = ((float)stonkValue - 1) / 9999;         
+
+        float newYScale = (scaleRange * scalePercentage) + minSize;
+
+        Debug.Log("Y Val: " + newYScale);
+        Vector3 newScale = new Vector3(companyBuilding.transform.localScale.x, companyBuilding.transform.localScale.y, newYScale);
+        companyBuilding.transform.localScale = newScale;
     }
 }
