@@ -121,6 +121,8 @@ public class newsGen : MonoBehaviour
         companies.Add(18, "prawns");
         companies.Add(19, "flower");
         companies.Add(20, "bazinga");
+        companies.Add(21, "anime");
+        companies.Add(22, "hentai");
         return companies;
     }
 
@@ -168,6 +170,7 @@ public class newsGen : MonoBehaviour
     }
 
     int previousHour = 80000;
+    static string newsHeadline;
 
     private void Update()
     {
@@ -175,7 +178,8 @@ public class newsGen : MonoBehaviour
         {
             if (Time_Handler.currentHour >= 9 && Time_Handler.currentHour <= 20)
             {
-                updateCompanyData(createNews(Time_Handler.currentHour));
+                NewsArticle currNews = createNews(Time_Handler.currentHour);
+                updateCompanyData(currNews);
             }
         }
 
