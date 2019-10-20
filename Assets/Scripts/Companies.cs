@@ -26,8 +26,8 @@ public class History
 
 public class Company
 {
-    string name;
-    int stonkValue;
+    public string name;
+    public int stonkValue;
     List<History> stonkHistory;
     GameObject companyBuilding;
     float maxSize;
