@@ -144,6 +144,47 @@ public class newsGen : MonoBehaviour
 
     private void Start()
     {
+<<<<<<< Updated upstream
         NewsArticle test = createNews();
+=======
+        foreach (Company company in Globals.companies)
+        {
+            if (company.getName() == article.getCompany().getName())
+            {
+                Debug.Log(company.getStonkValue());
+                float onePercent = company.getStonkValue() / 100;
+                float totalPercent = onePercent * article.getScore();
+
+                if ((float)company.getStonkValue() + totalPercent < 0)
+                {
+                    company.setStonkValue(1);
+                } else
+                {
+                    company.setStonkValue(Mathf.RoundToInt((float)company.getStonkValue() + totalPercent));
+                }
+
+                company.updateStonkHistory(article.getHourCreated(), company.getStonkValue());
+                Debug.Log(company.getStonkValue());
+            }
+        }
+    }
+
+    int previousHour = 80000;
+    public static string newsHeadline;
+
+    private void Update()
+    {
+        if (Time_Handler.currentHour != previousHour)
+        {
+            if (Time_Handler.currentHour >= 9 && Time_Handler.currentHour <= 20)
+            {
+                NewsArticle currNews = createNews(Time_Handler.currentHour);
+                updateCompanyData(currNews);
+                newsHeadline = currNews.getMessage();
+            }
+        }
+
+        previousHour = Time_Handler.currentHour;
+>>>>>>> Stashed changes
     }
 }
