@@ -54,8 +54,8 @@ public class Movement : MonoBehaviour
         var z = Input.GetAxis("Vertical") * speed;
         var y = Input.GetAxis("Horizontal") * rotSpeed;
 
-        transform.Translate(0, 0, z);
-        transform.Rotate(0, y, 0);
+        transform.Translate(0, -z, 0);
+        transform.Rotate(0, 0, y);
 
         if (Input.GetKey(KeyCode.Space) && isOnGround == true)
         {
