@@ -13,7 +13,7 @@ public class CryingIncTerminal : BeansTerminal
 
         UpdateUI();
 
-        stockText = GameObject.Find("Stock Text").GetComponent<Text>();
+        // = GameObject.Find("Stock Text").GetComponent<Text>();
 
         for (int i = 0; i < Globals.companies.Count; i++)
         {
@@ -28,5 +28,13 @@ public class CryingIncTerminal : BeansTerminal
     public override void UpdateUI()
     {
         stockText.text = stock + " Stocks: " + stockAmount.ToString();
+        for (int i = 0; i < Globals.companies.Count; i++)
+        {
+            if (Globals.companies[i].name == "Crying Inc")
+            {
+                canCost = Globals.companies[i].stonkValue;
+                showStockPrice.text = "Cost: " + canCost;
+            }
+        }
     }
 }
