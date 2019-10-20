@@ -148,7 +148,7 @@ public class newsGen : MonoBehaviour
         Dictionary<int, string> objects = Things();
 
         System.Random rnd = new System.Random();
-        int randCompIndex = rnd.Next(1, Globals.companies.Count);
+        int randCompIndex = rnd.Next(0, Globals.companies.Count);
         int randActIndex = rnd.Next(1, actions.Count);
         int randObjIndex = rnd.Next(1, objects.Count);
 
@@ -165,15 +165,15 @@ public class newsGen : MonoBehaviour
     {
         foreach (Company company in Globals.companies)
         {
-            if (company.getName() == article.getCompany().getName())
+            if (company.getName() == (article.getCompany().getName()))
             {
-                Debug.Log(company.getStonkValue());
+                Debug.Log("stonk " + company.getStonkValue());
                 float onePercent = company.getStonkValue() / 100;
                 float totalPercent = onePercent * article.getScore();
 
-                if ((float)company.getStonkValue() + totalPercent < 0)
+                if ((float)company.getStonkValue() + totalPercent <= 100)
                 {
-                    company.setStonkValue(1);
+                    company.setStonkValue(100);
                 } else
                 {
                     company.setStonkValue(Mathf.RoundToInt((float)company.getStonkValue() + totalPercent));

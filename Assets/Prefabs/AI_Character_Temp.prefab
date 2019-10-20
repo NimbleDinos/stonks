@@ -30,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3391990997830815704}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0, y: -1.7519, z: 0.0000002387}
+  m_LocalScale: {x: 1.5005875, y: 1.5005875, z: 1.5005875}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -157,13 +157,17 @@ MonoBehaviour:
   homeTime: 21
   timeSpentAtStocksMax: 1
   timeSpentAtNewsMax: 1
+  workStart: 8
+  workEnd: 17
   currentTask: 3
   agentNav: {fileID: 0}
   shouldVisitStocks: 0
   taskStartTime: 0
+  taskStartDay: 0
   taskStartHour: 0
   wanderTimerMax: 5
   timeBetweenNewsVisits: 4
   timeVisitedNews: 0
   mr: {fileID: 0}
   isTrader: 1
+  beenToWork: 0
