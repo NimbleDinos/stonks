@@ -170,7 +170,7 @@ public class newsGen : MonoBehaviour
     }
 
     int previousHour = 80000;
-    static string newsHeadline;
+    public static string newsHeadline;
 
     private void Update()
     {
@@ -180,6 +180,7 @@ public class newsGen : MonoBehaviour
             {
                 NewsArticle currNews = createNews(Time_Handler.currentHour);
                 updateCompanyData(currNews);
+                newsHeadline = currNews.getMessage();
             }
         }
 
