@@ -8,6 +8,7 @@ public class UpsetCompany : MonoBehaviour
     int moneyThrownCounter;
     CansModel can;
     public GameObject projectile;
+    public GameObject canThrowLocation;
 
 
     public void Start()
@@ -48,11 +49,14 @@ public class UpsetCompany : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            moneyThrownCounter++;
-            can.ModifyCans (-1);
+            if (can.cansAmount > 0)
+            {
+                moneyThrownCounter++;
+                can.ModifyCans(-1);
 
-            GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-            bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 10);
+                GameObject bullet = Instantiate(projectile, canThrowLocation.transform.position, Quaternion.identity) as GameObject;
+                bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 100);
+            }
         }
     }
 

@@ -8,6 +8,7 @@ public class CansModel : MonoBehaviour
 {
     public float cansAmount;
     Text cansText;
+    public BeansTerminal bt;
 
     public float Stocks()
     {
@@ -24,7 +25,7 @@ public class CansModel : MonoBehaviour
     void Start()
     {
         cansText = GameObject.Find("Cans Text").GetComponent<Text>();
-        cansAmount = 10;
+        cansAmount = 800;
     }
 
     // Update is called once per frame

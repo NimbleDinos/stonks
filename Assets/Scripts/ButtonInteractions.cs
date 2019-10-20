@@ -5,69 +5,85 @@ using UnityEngine;
 public class ButtonInteractions : MonoBehaviour
 {
 
-    DataModel dm;
+    BeansTerminal dm;
     CansModel cm;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        dm = GetComponent<DataModel>();
-        cm = GetComponent<CansModel>();
+        cm = FindObjectOfType<CansModel>();
+    }
+
+    private void OnEnable()
+    {
+        if (cm != null)
+        {
+            if (cm.bt != null)
+            {
+                dm = cm.bt;
+                dm.UpdateUI();
+            }
+        }
     }
 
     public void SellOne()
     {
-        if(dm.stockAmount >= 1)
+        if(cm.bt.stockAmount >= 1)
         {
-            dm.ModifyStock(-1);
-            cm.ModifyCans(1 * dm.beansCost);
+            cm.bt.ModifyStock(-1);
+            cm.ModifyCans(1 * cm.bt.canCost);
+            cm.bt.UpdateUI();
         }
     }
 
     public void SellOneHundred()
     {
-        if (dm.stockAmount >= 100)
+        if (cm.bt.stockAmount >= 100)
         {
-            dm.ModifyStock(-100);
-            cm.ModifyCans(100 * dm.beansCost);
+            cm.bt.ModifyStock(-100);
+            cm.ModifyCans(100 * cm.bt.canCost);
+            cm.bt.UpdateUI();
         }
     }
 
     public void SellTen()
     {
-        if(dm.stockAmount >= 10)
+        if(cm.bt.stockAmount >= 10)
         {
-            dm.ModifyStock(-10);
-            cm.ModifyCans(10 * dm.beansCost);
+            cm.bt.ModifyStock(-10);
+            cm.ModifyCans(10 * cm.bt.canCost);
+            cm.bt.UpdateUI();
         }
     }
 
     public void BuyOne()
     {
-        if (cm.cansAmount >= dm.beansCost)
+        if (cm.cansAmount >= cm.bt.canCost)
         {
-            dm.ModifyStock(1);
-            cm.ModifyCans(- dm.beansCost);
+            cm.bt.ModifyStock(1);
+            cm.ModifyCans(- cm.bt.canCost);
+            cm.bt.UpdateUI();
         }
     }
 
     public void BuyTen()
     {
-        if (cm.cansAmount >= dm.beansCost * 10)
+        if (cm.cansAmount >= dm.canCost * 10)
         {
             dm.ModifyStock(10);
-            cm.ModifyCans(-dm.beansCost * 10);
+            cm.ModifyCans(-dm.canCost * 10);
+            dm.UpdateUI();
         }
     }
 
     public void BuyOneHundred()
     {
 
-        if (cm.cansAmount >= dm.beansCost * 100)
+        if (cm.cansAmount >= dm.canCost * 100)
         {
             dm.ModifyStock(100);
-            cm.ModifyCans(-dm.beansCost * 100);
+            cm.ModifyCans(-dm.canCost * 100);
+            dm.UpdateUI();
         }
     }
 }

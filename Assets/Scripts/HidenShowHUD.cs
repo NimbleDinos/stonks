@@ -9,10 +9,13 @@ public class HidenShowHUD : MonoBehaviour
     private bool isShowing;
     bool isColliding = false;
 
+    public BeansTerminal bt;
+    private CansModel cm;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        cm = GetComponent<CansModel>();
     }
 
     // Update is called once per frame
@@ -20,7 +23,9 @@ public class HidenShowHUD : MonoBehaviour
     {
         if (isColliding == true && Input.GetKeyDown(KeyCode.E))
         {
+          
             isShowing = !isShowing;
+         
             stockHUD.SetActive(isShowing);
         }
     }
@@ -29,6 +34,9 @@ public class HidenShowHUD : MonoBehaviour
     {
         if (collision.gameObject.tag == "Terminal")
         {
+            bt = collision.gameObject.GetComponent<BeansTerminal>();
+            cm.bt = bt;
+            cm.bt.UpdateUI();
             isColliding = true;
             Debug.Log("am colliding");
         }
