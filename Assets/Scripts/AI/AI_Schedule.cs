@@ -2,29 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum TaskType {News, Stocks, Home, Wander};
+public enum TaskType {News, Stocks, Home, Wander, Work};
 
 public class AI_Schedule : MonoBehaviour
 {
-    public int newsHour = 8, stocksHour = 10, homeTime = 21, timeSpentAtStocksMax = 1, timeSpentAtNewsMax = 1;
+    public int newsHour = 8, newsClose = 20, stocksHour = 10, stocksClose = 20, homeTime = 21, timeSpentAtStocksMax = 1, timeSpentAtNewsMax = 1, workStart = 8, workEnd = 17;
 
     public TaskType currentTask = TaskType.Wander;
 
     public AI_Navigation agentNav;
 
-    private bool visitedNewsMorning = false, visitedStocksMorning = false, atHome = true, isBusy = false;
-    
+    private bool recentlyVisitedNews = false, atHome = true, isBusy = false;
+    [HideInInspector]
+    public bool shouldVisitStocks = false;
+
     private bool startedDay = false;
 
+    [HideInInspector]
     public float taskStartTime = 0.0f;
+    [HideInInspector]
     public int taskStartHour = 0;
 
     public float wanderTimerMax = 5.0f;
     private float wanderTimeCurrent = 0.0f;
 
+    public int timeBetweenNewsVisits = 4;
+
+    [HideInInspector]
+    public int timeVisitedNews = 0;
+
     public MeshRenderer mr;
 
     public bool isTrader = true;
+
+    public bool beenToWork = false;
 
     private void Update()
     {
@@ -37,16 +48,24 @@ public class AI_Schedule : MonoBehaviour
         {
             startedDay = false;
         }
+
+        if (recentlyVisitedNews)
+        {
+            if (Time_Handler.currentHour >= timeVisitedNews + timeBetweenNewsVisits)
+            {
+                recentlyVisitedNews = false;
+            }
+        }
     
 
         if (!isBusy)
         {
-            if (Time_Handler.currentHour >= newsHour && !visitedNewsMorning)
+            if (Time_Handler.currentHour >= newsHour && !recentlyVisitedNews && Time_Handler.currentHour < newsClose && isTrader)
             {
                 GoVisitNews();
             }
 
-            if (Time_Handler.currentHour >= stocksHour && !visitedStocksMorning)
+            if (Time_Handler.currentHour >= stocksHour && shouldVisitStocks && Time_Handler.currentHour < stocksClose && isTrader)
             {
                 GoVisitStocks();
             }
@@ -55,6 +74,11 @@ public class AI_Schedule : MonoBehaviour
             {
                 GoHome();
             }
+
+            if (Time_Handler.currentHour >= workStart && !beenToWork && !isTrader)
+            {
+                GoToWork();
+            } 
         }
 
         switch (currentTask)
@@ -77,6 +101,14 @@ public class AI_Schedule : MonoBehaviour
                 break;
             case TaskType.Home:
                 break;
+            case TaskType.Work:
+                if (beenToWork && Time_Handler.currentHour >= workEnd)
+                {
+                    currentTask = TaskType.Wander;
+                    atHome = false;
+                    isBusy = false;
+                }
+                break;
             default:
                 break;
         }
@@ -89,25 +121,23 @@ public class AI_Schedule : MonoBehaviour
         {
             mr.enabled = true;
         }
-
     }
 
     public void StartNewDay()
     {
         startedDay = true;
-        visitedNewsMorning = false;
-        visitedStocksMorning = false;
+        recentlyVisitedNews = false;
+        beenToWork = false;
+        shouldVisitStocks = false;
     }
 
     private void GoVisitNews()
     {
         Debug.Log("Visiting News");
 
-        visitedNewsMorning = true;
+        recentlyVisitedNews = true;
         isBusy = true;
         atHome = false;
-
-        //agentNav.SetTarget(agentNav.FindNearestNewsStand());
 
         int rand = Random.Range(0, agentNav.newsStands.Count);
         agentNav.SetTarget(agentNav.newsStands[rand], TaskType.News);
@@ -117,14 +147,11 @@ public class AI_Schedule : MonoBehaviour
     {
         Debug.Log("Visiting Stock Exchange");
 
-        visitedStocksMorning = true;
+        shouldVisitStocks = false;
         isBusy = true;
         atHome = false;
 
-        //agentNav.SetTarget(agentNav.FindNearestStocksTerminal());
-
-        int rand = Random.Range(0, agentNav.stockMarketTerminals.Count);
-        agentNav.SetTarget(agentNav.stockMarketTerminals[rand], TaskType.Stocks);
+        agentNav.SetTarget(agentNav.stockMarketPoint, TaskType.Stocks);
     }
 
     private void GoHome()
@@ -132,14 +159,21 @@ public class AI_Schedule : MonoBehaviour
         agentNav.SetTarget(agentNav.homePoint, TaskType.Home);
         atHome = true;
     }
+    private void GoToWork()
+    {
+        agentNav.SetTarget(agentNav.workPoint, TaskType.Work);
+        currentTask = TaskType.Work;
+        isBusy = true;
+        beenToWork = true;
+        atHome = false;
+    }
 
     private void Wander()
     {
         agentNav.SetWanderTarget();
+        isBusy = false;
+        atHome = false;
     }
 
-    /*TODO Wander, if in wander state, pick random valid location and begin 
-     * walking their, after a few seconds pick new location and repeat until 
-     * no longer wander state*/
-
+    //TODO determine if news is worthwhile
 }
