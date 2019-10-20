@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class AI_Navigation : MonoBehaviour
 {
-    public Transform homePoint, workPoint;
-    public List<Transform> stockMarketTerminals, newsStands, leisureLocations;
+    public Transform homePoint, workPoint, stockMarketPoint;
+    public List<Transform> newsStands, leisureLocations;
 
     public NavMeshAgent agent;
     public bool inMotion = false;
@@ -15,7 +15,7 @@ public class AI_Navigation : MonoBehaviour
 
     private Vector3 currentDestination;
 
-    private TaskType intendedTask = TaskType.Wander;
+    private TaskType intendedTask = TaskType.Home;
 
     private List<Transform> wanderList;
     
@@ -28,8 +28,6 @@ public class AI_Navigation : MonoBehaviour
         wanderList = new List<Transform>();
         wanderList.AddRange(newsStands);
         wanderList.AddRange(leisureLocations);
-
-        //TODO wander to stock excahnge for traders?
     }
 
     public void Update()
@@ -45,6 +43,13 @@ public class AI_Navigation : MonoBehaviour
             if (schedule.currentTask == TaskType.Wander)
             {
                 SetWanderTarget();
+            }
+
+            if (schedule.currentTask == TaskType.News)
+            {
+                schedule.timeVisitedNews = Time_Handler.currentHour;
+                //TODO get rid of
+                schedule.shouldVisitStocks = true;
             }
         }
     }
@@ -97,13 +102,7 @@ public class AI_Navigation : MonoBehaviour
     public void SetWanderTarget()
     {
         int rand = Random.Range(0, wanderList.Count);
-        Vector3 target = wanderList[rand].position;
-        intendedTask = TaskType.Wander;
-        
-        currentDestination = target;
-        agent.SetDestination(currentDestination);
-        agent.isStopped = false;
-        inMotion = true;
+        SetTarget(wanderList[rand], TaskType.Wander);
     }
 
     public Vector3 GetNavMeshPosition(Vector3 origin, float distance)

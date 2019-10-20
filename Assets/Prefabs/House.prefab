@@ -285,6 +285,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 45, y: 44.999996, z: 43.999996}
   m_Center: {x: 0, y: 0.000030517578, z: 21.999998}
+--- !u!1 &4989849722633087962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2629881152253151625}
+  m_Layer: 0
+  m_Name: House_Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2629881152253151625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4989849722633087962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4821883264785774216}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6244083725729005117
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +712,7 @@ Transform:
   - {fileID: 6957732146313215908}
   - {fileID: 2230531958345365498}
   - {fileID: 1975928962368453498}
+  - {fileID: 2629881152253151625}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
