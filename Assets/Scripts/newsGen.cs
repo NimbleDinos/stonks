@@ -85,6 +85,17 @@ public class newsGen : MonoBehaviour
             actionsList.Add(new Score(3, "murders"));
             actionsList.Add(new Score(-4, "opress"));
             actionsList.Add(new Score(5, "Bazingas"));
+            actionsList.Add(new Score(7, "slaps"));
+            actionsList.Add(new Score(-10, "discombobulates"));
+            actionsList.Add(new Score(2, "rotates"));
+            actionsList.Add(new Score(1, "finds"));
+            actionsList.Add(new Score(-4, "exploits"));
+            actionsList.Add(new Score(1, "beaned"));
+            actionsList.Add(new Score(-3, "bombs"));
+            actionsList.Add(new Score(1, "cooks"));
+            actionsList.Add(new Score(-3, "kicks"));
+            actionsList.Add(new Score(2, "votes for"));
+            actionsList.Add(new Score(-4, "bullies"));
             return actionsList;
         }
 
@@ -123,6 +134,11 @@ public class newsGen : MonoBehaviour
         companies.Add(20, "bazinga");
         companies.Add(21, "anime");
         companies.Add(22, "hentai");
+        companies.Add(23, "Hitler");
+        companies.Add(24, "Rasputin");
+        companies.Add(25, "racists");
+        companies.Add(26, "charities");
+
         return companies;
     }
 
