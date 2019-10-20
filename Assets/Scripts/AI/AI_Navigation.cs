@@ -39,6 +39,7 @@ public class AI_Navigation : MonoBehaviour
             schedule.currentTask = intendedTask;
             schedule.taskStartHour = Time_Handler.currentHour;
             schedule.taskStartTime = Time_Handler.currentTime;
+            schedule.taskStartDay = Time_Handler.currentDay;
 
             if (schedule.currentTask == TaskType.Wander)
             {

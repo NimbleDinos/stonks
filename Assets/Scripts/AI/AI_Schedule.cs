@@ -21,6 +21,8 @@ public class AI_Schedule : MonoBehaviour
     [HideInInspector]
     public float taskStartTime = 0.0f;
     [HideInInspector]
+    public int taskStartDay = 0;
+    [HideInInspector]
     public int taskStartHour = 0;
 
     public float wanderTimerMax = 5.0f;
@@ -84,14 +86,14 @@ public class AI_Schedule : MonoBehaviour
         switch (currentTask)
         {
             case TaskType.News:
-                if (Time_Handler.currentHour >= taskStartHour + timeSpentAtNewsMax && Time_Handler.currentTime >= taskStartTime)
+                if ((Time_Handler.currentHour >= taskStartHour + timeSpentAtNewsMax && Time_Handler.currentTime >= taskStartTime) || Time_Handler.currentDay > taskStartDay)
                 {
                     isBusy = false;
                     currentTask = TaskType.Wander;
                 }
                 break;
             case TaskType.Stocks:
-                if (Time_Handler.currentHour >= taskStartHour + timeSpentAtStocksMax && Time_Handler.currentTime >= taskStartTime)
+                if ((Time_Handler.currentHour >= taskStartHour + timeSpentAtStocksMax && Time_Handler.currentTime >= taskStartTime) || Time_Handler.currentDay > taskStartDay)
                 {
                     isBusy = false;
                     currentTask = TaskType.Wander;
