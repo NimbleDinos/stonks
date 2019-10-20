@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DataModel : MonoBehaviour
 {
 
-    float stockAmount;
+    public float stockAmount;
     Text stockText;
     public int beansCost = 2;
     string stock = "Bean Corp";
@@ -31,6 +31,6 @@ public class DataModel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        stockText.text =  stock + "Stocks: " + stockAmount.ToString();
+        stockText.text =  stock + " Stocks: " + stockAmount.ToString();
     }
 }
