@@ -68,22 +68,22 @@ public class ButtonInteractions : MonoBehaviour
 
     public void BuyTen()
     {
-        if (cm.cansAmount >= dm.canCost * 10)
+        if (cm.cansAmount >= cm.bt.canCost * 10)
         {
-            dm.ModifyStock(10);
-            cm.ModifyCans(-dm.canCost * 10);
-            dm.UpdateUI();
+            cm.bt.ModifyStock(10);
+            cm.ModifyCans(-cm.bt.canCost * 10);
+            cm.bt.UpdateUI();
         }
     }
 
     public void BuyOneHundred()
     {
 
-        if (cm.cansAmount >= dm.canCost * 100)
+        if (cm.cansAmount >= cm.bt.canCost * 100)
         {
-            dm.ModifyStock(100);
-            cm.ModifyCans(-dm.canCost * 100);
-            dm.UpdateUI();
+            cm.bt.ModifyStock(100);
+            cm.ModifyCans(- cm.bt.canCost * 100);
+            cm.bt.UpdateUI();
         }
     }
 }
